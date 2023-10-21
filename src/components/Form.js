@@ -11,10 +11,12 @@ const Form = ({ todo, setToDo, toDoList, setToDoList }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setToDoList([...toDoList, { id: counter, name: todo }]);
-        setToDo((todo = ""));
-        setCounter(counter + 1);
-        // console.log(toDoList);
+        if (todo !== "") {
+            setToDoList([...toDoList, { id: counter, name: todo }]);
+            setToDo((todo = ""));
+            setCounter(counter + 1);
+            // console.log(toDoList);
+        }
     };
 
     return (

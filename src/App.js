@@ -12,7 +12,7 @@ function App() {
             <div>
                 <Header />
                 <Form todo={todo} setToDo={setToDo} toDoList={toDoList} setToDoList={setToDoList} />
-                <ToDoList toDoList={toDoList} />
+                <ToDoList toDoList={toDoList} setToDoList={setToDoList} />
             </div>
         </div>
     );
